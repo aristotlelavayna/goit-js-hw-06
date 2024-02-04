@@ -1,11 +1,8 @@
-function checkNumberCharacters(value) {
-   const maxLength = 6; 
-   document.getElementById('validation-input').value;
-
-
-if (value == maxLength) {
-    document.getElementById("validation-input").style.borderColor = "#4caf50";
-} else {
-    document.getElementById("validation-input").style.borderColor = "#f44336";
-}
-};
+let input = document.getElementById("validation-input");
+input.addEventListener("blur", function (e) {
+  if (input.value.length >= 6) {
+    e.target.classList.add("valid");
+  } else {
+    e.target.classList.add("invalid");
+  }
+});
